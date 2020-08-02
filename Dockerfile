@@ -8,7 +8,7 @@ ENV SPARK_VERSION=2.4.6
 ENV HADOOP_VERSION=2.7
 #Run the following commands on my Linux machine
 #install the below packages on the ubuntu image
-sudo date --utc --set "Sun Aug 2 2:32:00 UTC 2020"
+RUN sudo date --utc --set "Sun Aug 2 2:32:00 UTC 2020"
 RUN apt-get update && apt-get -y install gnupg2 wget openjdk-8-jdk scala
 #Download the Spark binaries from the repo
 WORKDIR /
