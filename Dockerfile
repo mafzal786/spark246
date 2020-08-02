@@ -6,7 +6,7 @@ FROM ubuntu:latest
 LABEL image=Spark-base-image
 ENV SPARK_VERSION=2.4.6
 ENV HADOOP_VERSION=2.7
-RUN date –s 20-08-01 30:00:00
+RUN timedatectl
 #Run the following commands on my Linux machine
 #install the below packages on the ubuntu image
 RUN apt-get update && apt-get -y install gnupg2 wget openjdk-8-jdk scala
