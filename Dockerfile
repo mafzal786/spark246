@@ -4,8 +4,8 @@
 FROM centos:centos7
 #Any label to recognise this image.
 #LABEL image=Spark-base-image
-ENV SPARK_VERSION=2.4.6
-ENV HADOOP_VERSION=2.7
+ENV SPARK_VERSION 2.4.6
+ENV HADOOP_VERSION 2.7
 #Run the following commands on my Linux machine
 #install the below packages on the ubuntu image
 RUN yum -y update && yum -y install gnupg2 wget openjdk-8-jdk scala
