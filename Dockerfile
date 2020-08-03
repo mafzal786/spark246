@@ -1,4 +1,4 @@
-#ARG ubuntu_version=18.04
+ARG ubuntu_version=16.04
 #FROM ubuntu:${ubuntu_version}
 #Use ubuntu 18:04 as your base image
 FROM ubuntu:16.04
