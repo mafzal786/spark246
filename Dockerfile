@@ -3,7 +3,7 @@
 #Use ubuntu 18:04 as your base image
 FROM centos:centos7
 #Any label to recognise this image.
-LABEL image=Spark-base-image
+#LABEL image=Spark-base-image
 ENV SPARK_VERSION=2.4.6
 ENV HADOOP_VERSION=2.7
 #Run the following commands on my Linux machine
