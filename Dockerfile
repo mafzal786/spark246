@@ -21,4 +21,3 @@ RUN tar -xzf /spark-2.4.6-bin-hadoop2.7.tgz && \
 
 EXPOSE 4040
 USER 1001
-ENTRYPOINT ["/"]
