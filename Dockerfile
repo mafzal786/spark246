@@ -6,11 +6,13 @@ FROM centos:centos7
 #LABEL image=Spark-base-image
 ENV SPARK_VERSION 2.4.6
 ENV HADOOP_VERSION 2.7
+ENV NB_USER=nbuser
+ENV NB_UID=1011
 #Run the following commands on my Linux machine
 #install the below packages on the ubuntu image
 RUN yum -y update && yum -y install gnupg2 wget openjdk-8-jdk scala
 #Download the Spark binaries from the repo
-WORKDIR /
+
 # RUN wget --no-verbose http://www.gtlib.gatech.edu/pub/apache/spark/spark-2.4.1/spark-2.4.1-bin-hadoop2.7.tgz
 RUN wget --no-verbose http://www.trieuvan.com/apache/spark/spark-2.4.6/spark-2.4.6-bin-hadoop2.7.tgz
 # Untar the downloaded binaries , move them the folder name spark and add the spark bin on my class path
@@ -25,6 +27,12 @@ RUN chmod +x /tini
 
 
 EXPOSE 4040
-USER 1001
 
-ENTRYPOINT ["/tini", "--"]
+ENV HOME /home/$NB_USER
+USER $NB_UID
+
+
+WORKDIR /
+# ENTRYPOINT ["/tini", "--"]
+ENTRYPOINT ["tail", "-f", "/dev/null"]
+
