@@ -22,7 +22,9 @@ RUN tar -xzf /spark-2.4.6-bin-hadoop2.7.tgz && \
 ENV TINI_VERSION v0.19.0
 ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /tini
 RUN chmod +x /tini
-ENTRYPOINT ["/tini", "--"]
+
 
 EXPOSE 4040
 USER 1001
+
+ENTRYPOINT ["/tini", "--"]
