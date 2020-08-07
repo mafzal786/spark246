@@ -10,7 +10,7 @@ ENV NB_USER=nbuser
 ENV NB_UID=1011
 #Run the following commands on my Linux machine
 #install the below packages on the ubuntu image
-RUN yum -y update && yum -y install gnupg2 wget openjdk-8-jdk scala
+RUN yum -y update && yum -y install gnupg2 wget java-1.8.0-openjdk java-1.8.0-openjdk-devel scala
 #Download the Spark binaries from the repo
 
 # RUN wget --no-verbose http://www.gtlib.gatech.edu/pub/apache/spark/spark-2.4.1/spark-2.4.1-bin-hadoop2.7.tgz
