@@ -4,7 +4,7 @@
 FROM centos:centos7
 #Any label to recognise this image.
 #LABEL image=Spark-base-image
-ENV SPARK_VERSION 2.4.6
+ENV SPARK_VERSION 2.4.5
 ENV HADOOP_VERSION 2.7
 ENV NB_USER=nbuser
 ENV NB_UID=1011
