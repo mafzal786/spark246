@@ -36,6 +36,8 @@ USER $NB_UID
 
 
 WORKDIR /
+CMD ["bin/spark-class", "org.apache.spark.deploy.master.Master"]
 # ENTRYPOINT ["/tini", "--"]
 # ENTRYPOINT ["tail", "-f", "/dev/null"]
+
 
