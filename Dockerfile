@@ -15,7 +15,7 @@ RUN yum -y update && yum -y install gnupg2 wget java-1.8.0-openjdk java-1.8.0-op
 
 # RUN wget --no-verbose http://www.gtlib.gatech.edu/pub/apache/spark/spark-2.4.1/spark-2.4.1-bin-hadoop2.7.tgz
 RUN cd tmp
-RUN wget http://apache.mirrors.tds.net/spark/spark-2.4.5/spark-2.4.5-bin-hadoop2.7.tgz
+RUN wget --no-verbose http://apache.mirrors.tds.net/spark/spark-2.4.5/spark-2.4.5-bin-hadoop2.7.tgz
 # Untar the downloaded binaries , move them the folder name spark and add the spark bin on my class path
 RUN tar -xzf spark-2.4.5-bin-hadoop2.7.tgz 
 RUN cd /
