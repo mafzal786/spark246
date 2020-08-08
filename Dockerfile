@@ -37,5 +37,5 @@ USER $NB_UID
 
 WORKDIR /
 # ENTRYPOINT ["/tini", "--"]
-ENTRYPOINT ["tail", "-f", "/dev/null"]
+# ENTRYPOINT ["tail", "-f", "/dev/null"]
 
