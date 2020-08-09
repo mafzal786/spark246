@@ -17,8 +17,9 @@ RUN yum -y update && yum -y install gnupg2 wget java-1.8.0-openjdk java-1.8.0-op
 RUN wget --no-verbose http://apache.mirrors.tds.net/spark/spark-2.4.5/spark-2.4.5-bin-hadoop2.7.tgz
 # Untar the downloaded binaries , move them the folder name spark and add the spark bin on my class path
 RUN tar -xzf spark-2.4.5-bin-hadoop2.7.tgz 
-RUN mv spark-2.4.5-bin-hadoop2.7 spark
-ENV SPARK_HOME /spark
+
+RUN mv spark-2.4.5-bin-hadoop2.7 /opt/spark
+ENV SPARK_HOME /opt/spark
 ENV PATH $PATH:${SPARK_HOME}/bin
 
 #Expose the UI Port 4040
